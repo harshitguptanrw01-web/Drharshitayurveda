@@ -1,1 +1,50 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ page.title }} | Dr. Harshit Gupta</title>
+<meta name="description" content="{{ page.description | default: page.excerpt | strip_html | truncate: 155 }}">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<meta name="author" content="{{ page.author | default: 'Dr. Harshit Gupta' }}">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<style>
+:root{--bg:#090909;--surface:#121212;--text:#f4f4f4;--muted:#b7b7b7;--gold:#d4af37;--line:#292929}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.8}
+a{color:inherit}.wrap{width:min(860px,90%);margin:auto}.nav{border-bottom:1px solid var(--line);padding:20px 0}.brand{font-weight:800;text-decoration:none}.brand span{color:var(--gold)}
+main{padding:80px 0}.eyebrow{color:var(--gold);font-size:.76rem;font-weight:800;letter-spacing:2px;text-transform:uppercase}
+h1{font-size:clamp(2.3rem,6vw,4.5rem);line-height:1.08;letter-spacing:-1px;margin:15px 0 18px}h2{font-size:1.7rem;margin:42px 0 12px}h3{font-size:1.15rem;margin:25px 0 8px}
+.intro{font-size:1.12rem;color:#d0d0d0}.meta{color:#888;font-size:.8rem;margin-bottom:28px}p,li{color:var(--muted)}ul{padding-left:24px}
+.author{margin-top:50px;padding:25px;background:var(--surface);border-left:3px solid var(--gold)}
+.back{display:inline-block;margin-top:28px;color:var(--gold);font-weight:700;text-decoration:none}
+footer{border-top:1px solid var(--line);padding:35px 0;color:#777;font-size:.8rem}
+</style>
+</head>
+<body>
+<nav class="nav"><div class="wrap"><a class="brand" href="{{ '/' | relative_url }}">Dr. <span>Harshit Gupta</span></a></div></nav>
+<main><article class="wrap">
+<span class="eyebrow">{{ page.category | default: "Ayurveda • Health" }}</span>
+<h1>{{ page.title }}</h1>
+<div class="meta">By {{ page.author | default: "Dr. Harshit Gupta" }} • {{ page.date | date: "%d %B %Y" }}</div>
+{% if page.intro %}<p class="intro">{{ page.intro }}</p>{% endif %}
+{{ content }}
+<div class="author">
+<strong>About Dr. Harshit Gupta</strong>
+<p>Dr. Harshit Gupta, BAMS, MD Ayurveda (Ayurvedic Physiology), is an Ayurvedic physician with three years of Junior Resident experience and clinical, academic and research exposure at the All India Institute of Ayurveda, New Delhi.</p>
+<p>His interests include Ayurvedic physiology, personalized healthcare, preventive health, lifestyle assessment, nutrition and physical wellbeing.</p>
+<a class="back" href="{{ '/' | relative_url }}">← Back to Dr. Harshit Gupta's website</a>
+</div>
+</article></main>
+<footer><div class="wrap">© {{ site.time | date: "%Y" }} Dr. Harshit Gupta • Ayurvedic Physician • MD Ayurveda • Research Experience</div></footer>
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org",
+ "@type":"Article",
+ "headline":{{ page.title | jsonify }},
+ "author":{"@type":"Person","name":"Dr. Harshit Gupta","jobTitle":"Ayurvedic Physician, MD Ayurveda"},
+ "datePublished":"{{ page.date | date: "%Y-%m-%d" }}",
+ "mainEntityOfPage":"{{ page.url | absolute_url }}"
+}
+</script>
+</body>
+</html>
