@@ -1,6 +1,6 @@
 ---
 title: "Ayurveda for Better Sleep: Lifestyle, Sleep Habits and Personalized Care"
-date: 2026-08-20
+date: 2026-08-17
 category: "Sleep • Lifestyle"
 description: "Explore an Ayurvedic approach to better sleep, including daily routine, sleep habits, relaxation practices and when persistent sleep problems need professional evaluation."
 intro: "Sleep is an essential part of physical and mental wellbeing. An Ayurvedic approach considers sleep in the context of daily routine, lifestyle, diet, mental state and the individual's overall health pattern."
