@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://harshitguptanrw01-web.github.io/Drharshitayurveda/sitemap.xml
