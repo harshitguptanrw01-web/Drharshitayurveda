@@ -1,0 +1,19 @@
+title: "Dr. Harshit Gupta | Ayurvedic Physician"
+description: "Dr. Harshit Gupta, BAMS, MD Ayurveda (Ayurvedic Physiology), Ayurvedic Physician and Junior Resident with clinical, academic and research experience."
+url: "https://harshitguptanrw01-web.github.io"
+baseurl: "/Drharshitayurveda"
+lang: "en"
+
+theme: null
+plugins:
+  - jekyll-sitemap
+
+permalink: /articles/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: article
+      author: "Dr. Harshit Gupta"
