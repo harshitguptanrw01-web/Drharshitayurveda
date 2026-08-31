@@ -8,6 +8,7 @@
 <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
 <meta name="author" content="{{ page.author | default: 'Dr. Harshit Gupta' }}">
 <link rel="canonical" href="{{ page.url | absolute_url }}">
+ <link rel="icon" type="image/png" href="{{ '/assets/favicon.png' | relative_url }}">
 <style>
 :root{--bg:#090909;--surface:#121212;--text:#f4f4f4;--muted:#b7b7b7;--gold:#d4af37;--line:#292929}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Arial,Helvetica,sans-serif;line-height:1.8}
@@ -17,12 +18,37 @@ h1{font-size:clamp(2.3rem,6vw,4.5rem);line-height:1.08;letter-spacing:-1px;margi
 .intro{font-size:1.12rem;color:#d0d0d0}.meta{color:#888;font-size:.8rem;margin-bottom:28px}p,li{color:var(--muted)}ul{padding-left:24px}
 .author{margin-top:50px;padding:25px;background:var(--surface);border-left:3px solid var(--gold)}
 .back{display:inline-block;margin-top:28px;color:var(--gold);font-weight:700;text-decoration:none}
+ .breadcrumb{
+  margin-bottom:22px;
+  font-size:.78rem;
+  color:#888;
+}
+.breadcrumb a{
+  color:#aaa;
+  text-decoration:none;
+}
+.breadcrumb a:hover{
+  color:var(--gold);
+}
+.breadcrumb span{
+  color:#666;
+  margin:0 7px;
+}
 footer{border-top:1px solid var(--line);padding:35px 0;color:#777;font-size:.8rem}
 </style>
 </head>
 <body>
 <nav class="nav"><div class="wrap"><a class="brand" href="{{ '/' | relative_url }}">Dr. <span>Harshit Gupta</span></a></div></nav>
 <main><article class="wrap">
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+<a href="{{ '/' | relative_url }}">Dr. Harshit Ayurveda</a>
+<span>›</span>
+<a href="{{ '/#articles' | relative_url }}">Articles</a>
+<span>›</span>
+<span>{{ page.title }}</span>
+</nav>
+
 <span class="eyebrow">{{ page.category | default: "Ayurveda • Health" }}</span>
 <h1>{{ page.title }}</h1>
 <div class="meta">By {{ page.author | default: "Dr. Harshit Gupta" }} • {{ page.date | date: "%d %B %Y" }}</div>
